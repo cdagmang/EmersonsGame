@@ -21,11 +21,17 @@ public class WelcomePageStepdefs implements En {
         });
 
         When("^I try to view the Welcome Page$", () -> {
-            
+            getDriver().get(url("/welcome"));
         });
 
         Then("^I must see a welcome message$", () -> {
             
+        });
+
+        // Help Button
+        Then("^I must see the Help Button$", () -> {
+            List<WebElement> rows = getDriver().findElements(By.cssSelector("#helpButton"));
+            assertThat(rows.size(), is(1));
         });
     }
 }

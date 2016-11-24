@@ -6,3 +6,5 @@ build/
 out/
 log/*.log
 emersonsgame.db
+.idea/
+classes/

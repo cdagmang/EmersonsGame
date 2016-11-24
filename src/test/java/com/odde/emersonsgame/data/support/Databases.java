@@ -30,6 +30,7 @@ public class Databases {
         databaseTester.setTearDownOperation(DatabaseOperation.DELETE_ALL);
 
         String file = "src/test/resources/dataset/" + dataset;
+        databaseTester.setTearDownOperation(DatabaseOperation.DELETE_ALL);
 
         return new FlatXmlDataSetBuilder().build(new FileInputStream(file));
     }
