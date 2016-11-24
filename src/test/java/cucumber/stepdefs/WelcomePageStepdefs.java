@@ -14,6 +14,18 @@ import static cucumber.stepdefs.support.WebDrivers.getDriver;
 import static org.hamcrest.CoreMatchers.is;
 import static org.junit.Assert.assertThat;
 
-public class WelcomePageStepdefs {
-    
+public class WelcomePageStepdefs implements En {
+    public WelcomePageStepdefs() {
+        Given("^I am in the Welcome Page$", () -> {
+            
+        });
+
+        When("^I try to view the Welcome Page$", () -> {
+            
+        });
+
+        Then("^I must see a welcome message$", () -> {
+            
+        });
+    }
 }
