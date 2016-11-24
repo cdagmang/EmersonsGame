@@ -8,7 +8,6 @@ public class WebDrivers {
 
     public static WebDriver getNewDriver() {
         driver = new FirefoxDriver();
-
         return driver;
     }
 
