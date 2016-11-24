@@ -20,29 +20,24 @@ public class WelcomePageStepdefs implements En {
             getDriver().get(url("/welcome"));
         });
 
-        When("^I try to view the Welcome Page message", () -> {
+        When("^I try to view the Welcome Page", () -> {
             getDriver().get(url("/welcome"));
         });
 
         Then("^I must see a welcome message$", () -> {
-            List<WebElement> welcomeMsg = getDriver().findElements(By.cssSelector("#message h1"));
+            List<WebElement> welcomeMsg = getDriver().findElements(By.cssSelector("#message"));
+            assertThat(welcomeMsg.size(), is(1));
         });
 
-        Given("^I am in the Welcome Page$", () -> {
-
+        Then("^I must see a start game button$", () -> {
+            List<WebElement> startBtn = getDriver().findElements(By.cssSelector("#startBtn"));
+            assertThat(startBtn.size(), is(1));
         });
 
-        When("^I try to view the Welcome Page$", () -> {
-            getDriver().get(url("/welcome"));
-        });
-
-        Then("^I must see a welcome message$", () -> {
-
-        });
 
         // Help Button
         Then("^I must see the Help Button$", () -> {
-            List<WebElement> rows = getDriver().findElements(By.cssSelector("#helpButton"));
+            List<WebElement> rows = getDriver().findElements(By.cssSelector("#helpBtn"));
             assertThat(rows.size(), is(1));
         });
     }

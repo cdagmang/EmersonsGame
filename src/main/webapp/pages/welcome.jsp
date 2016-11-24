@@ -11,6 +11,8 @@
     <title>Title</title>
 </head>
 <body>
-    <button id="helpButton"></button>
+    <h1 id="message">Welcome to Emersons Game<h1>
+    <button id="startBtn">Start</button>
+    <button id="helpBtn">Help</button>
 </body>
 </html>
