@@ -17,7 +17,19 @@ import static org.junit.Assert.assertThat;
 public class WelcomePageStepdefs implements En {
     public WelcomePageStepdefs() {
         Given("^I am in the Welcome Page$", () -> {
-            
+            getDriver().get(url("/welcome"));
+        });
+
+        When("^I try to view the Welcome Page message", () -> {
+            getDriver().get(url("/welcome"));
+        });
+
+        Then("^I must see a welcome message$", () -> {
+            List<WebElement> welcomeMsg = getDriver().findElements(By.cssSelector("#message h1"));
+        });
+
+        Given("^I am in the Welcome Page$", () -> {
+
         });
 
         When("^I try to view the Welcome Page$", () -> {
@@ -25,7 +37,7 @@ public class WelcomePageStepdefs implements En {
         });
 
         Then("^I must see a welcome message$", () -> {
-            
+
         });
 
         // Help Button
