@@ -38,7 +38,32 @@ public class Player {
         this.damage = damage;
     }
 
-    Player() {
+    public Player() {
+        setSteps(0);
+        setDamage(0);
+    }
 
+    void takeTurn(){
+        setRoll((int)(Math.random() * 6) + 1);
+        takeSteps();
+    }
+
+    void takeSteps() {
+        int stepsTaken = 0;
+
+        if (getSpeed().equals("Normal")) {
+            if ( roll % 2 == 1) {
+                stepsTaken = 1 - damage;
+            }
+            else {
+                stepsTaken = 2 - damage;
+            }
+        }
+        else {
+            int result = roll - damage;
+            stepsTaken = result < 0 ? 0: result;
+        }
+
+        setSteps(steps + stepsTaken);
     }
 }
