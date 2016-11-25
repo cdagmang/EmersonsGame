@@ -1,12 +1,10 @@
 package com.odde.emersonsgame.model;
 
 public class Player {
-    String speed;
-    int roll;
-    int steps;
-    int damage;
-    int newDamaga;
-
+    private String speed;
+    private int roll;
+    private int steps;
+    private int damage;
 
     public String getSpeed() {
         return speed;
@@ -38,14 +36,6 @@ public class Player {
 
     public void setDamage(int damage) {
         this.damage = damage;
-    }
-
-    public int getNewDamaga() {
-        return newDamaga;
-    }
-
-    public void setNewDamaga(int newDamaga) {
-        this.newDamaga = newDamaga;
     }
 
     Player() {

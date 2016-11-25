@@ -14,7 +14,7 @@ public class CreateRaceStepdefs implements En {
         });
 
         Given("^I choose (\\w) speed$", (String speed) ->{
-            
+
         });
 
         And("^Damage is (\\d)$", (Integer damage) -> {

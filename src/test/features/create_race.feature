@@ -9,10 +9,10 @@ Feature: Create Race
     And: Damage is <damage>
     When: Dice roll is <roll>
     Then: I take <steps> steps
-    But: Damage is now <damage>
+    But: Damage is now <newDamage>
 
     Examples:
-      | speed   | damage  | roll  | steps | newDamaga |
+      | speed   | damage  | roll  | steps | newDamage |
       | Normal  | 0       | 1     | 1     | 0         |
       | Normal  | 0       | 2     | 2     | 0         |
       | Normal  | 0       | 3     | 1     | 0         |
